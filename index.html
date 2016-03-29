@@ -9,9 +9,154 @@ email:      bgiri@conestogac.on.ca
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <title>PROG2070A4</title>
+        <!--jQuery mobile style-->
+        <link rel="stylesheet" type="text/css" href="css/lib/jquery.mobile-1.4.5.css">
+        <!--our styles-->
+        <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+        <!--jQuery-->
+        <script src="js/lib/jquery-2.1.4.js"></script>
+        <!--jQuery Mobile-->
+        <script src="js/lib/jquery.mobile-1.4.5.js"></script>
+        <!--jQuery validator-->
+        <script src="js/lib/jquery.validate.js"></script>
+        <!--our scripts-->
+        <script src="js/database.js"></script>
+        <script src="js/util.js"></script>
+        <script src="js/global.js"></script>
+
     </head>
     <body>
-        
+        <!--Home page-->
+        <div id="pageHome" data-role="page">
+            <div data-role="navbar" data-iconpos="top">
+                <ul>
+                    <li><a href="#pageHome" data-icon="home" data-theme="a" class="ui-btn-active ui-state-persist"
+                           data-transition="" data-rel="">Home</a></li>
+                    <li><a href="#pageAdd" data-icon="plus" data-theme="a" class=""
+                           data-transition="" data-rel="">Sale You Car</a></li>
+
+                    <li><a href="#pageSearch" data-icon="star" data-theme="a"
+                           class=""
+                           data-transition="" data-rel="">Buy Car</a></li>
+                    <li><a href="#pageContact" data-icon="star" data-theme="a"
+                           class=""
+                           data-transition="" data-rel="">Setting</a></li>
+                    <li><a href="#pageContact" data-icon="star" data-theme="a"
+                           class=""
+                           data-transition="" data-rel="">Contact Us</a></li>
+                </ul>
+            </div>
+            <header data-role="header" data-theme="b" data-position="fixed">
+                <h1>Welcome To AutoTrader App</h1>
+            </header>
+            <section data-role="content">
+                <a href="#pageAdd">
+                    <button class="button">Add New</button>
+                </a><br>
+                <a href="#pageSearch"><button class="button">Search</button></a>
+            </section>
+            <footer data-role="footer" data-theme="a" data-position="fixed">
+                <h4>&copy; Bhawani Giri 2016</h4>
+            </footer>
+        </div>
+        <!--HomePage Ends-->
+
+        <!--Add page-->
+        <div id="pageAdd" data-role="page">
+            <div data-role="navbar" data-iconpos="top">
+                <ul>
+                    <li><a href="#pageHome" data-icon="home" data-theme="a"
+                           data-transition="" data-rel="">Home</a></li>
+                    <li><a href="#pageAdd" data-icon="plus" data-theme="a"
+                           data-transition="" data-rel="" class="ui-btn-active ui-state-persist">Sale You Car</a></li>
+
+                    <li><a href="#pageSearch" data-icon="star" data-theme="a"
+                           class=""
+                           data-transition="" data-rel="">Buy Car</a></li>
+                    <li><a href="#pageSetting" data-icon="star" data-theme="a"
+                           class=""
+                           data-transition="" data-rel="">Setting</a></li>
+                    <li><a href="#pageContact" data-icon="star" data-theme="a"
+                           class=""
+                           data-transition="" data-rel="">Contact Us</a></li>
+                </ul>
+            </div>
+            <header data-role="header" data-theme="b" data-position="fixed">
+                <h1>Add Your Car </h1>
+            </header>
+            <section data-role="content">
+                <form name="autoAddForm" id="autoAddForm" action="" method="post">
+
+                    <h2>Seller Information</h2>
+
+                    <label for="txtName">Name</label>
+                    <input type="text" id="txtName" name="txtName"><br>
+
+                    <label for="txtAddress">Address</label>
+                    <input type="text" id="txtAddress" name="txtAddress"><br>
+                    <label for="txtCity">City</label>
+                    <input type="text" id="txtCity" name="txtCity"><br>
+
+                    <label for="txtPhone">Phone</label>
+                    <input type="text" id="txtPhone" name="txtPhone"><br>
+
+                    <label for="txtEmail">Email Address</label>
+                    <input type="text" id="txtEmail" name="txtEmail"><br>
+
+                    <h2>Vehicle Information</h2>
+                    <label for="txtMake">Make</label>
+                    <input type="text" id="txtMake" name="txtMake"><br>
+
+                    <label for="txtModel">Model</label>
+                    <input type="text" id="txtModel" name="txtModel"><br>
+
+                    <label for="txtYear">Year</label>
+                    <input type="text" id="txtYear" name="txtYear"><br>
+
+                    <button id="btnSubmit" name="btnSubmit" data-icon="plus"
+                            data-iconpos="left"
+                            data-theme="b" data-inline="" class="">Submit
+                    </button>                    <input type="reset" value="Reset Fields" id="reset">
+                </form>
+            </section>
+            <footer data-role="footer" data-theme="a" data-position="fixed">
+                <h4>&copy; Bhawani Giri 2016</h4>
+            </footer>
+        </div>
+        <!--AddPage Ends-->
+
+        <!--Search page-->
+        <div id="pageSearch" data-role="page">
+            <div data-role="navbar" data-iconpos="top">
+                <ul>
+                    <li><a href="#pageHome" data-icon="home" data-theme="a"
+                           data-transition="" data-rel="">Home</a></li>
+                    <li><a href="#pageAdd" data-icon="plus" data-theme="a"
+                           data-transition="" data-rel="">Sale You Car</a></li>
+
+                    <li><a href="#pageSearch" data-icon="star" data-theme="a"
+                           class="ui-btn-active ui-state-persist"
+                           data-transition="" data-rel="">Buy Car</a></li>
+                    <li><a href="#pageSetting" data-icon="star" data-theme="a"
+                           class=""
+                           data-transition="" data-rel="">Setting</a></li>
+                    <li><a href="#pageContact" data-icon="star" data-theme="a"
+                           class=""
+                           data-transition="" data-rel="">Contact Us</a></li>
+                </ul>
+            </div>
+            <header data-role="header" data-theme="b" data-position="fixed">
+                <h1>Find Your Car</h1>
+            </header>
+            <section data-role="content">
+
+            </section>
+            <footer data-role="footer" data-theme="a" data-position="fixed">
+                <h4>&copy; Bhawani Giri 2016</h4>
+            </footer>
+        </div>
+        <!--Search Ends-->
     </body>
 </html>
